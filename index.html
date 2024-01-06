@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Saumyajeet's Resume</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #FAFAFA;
+        font: 14px;
+        font-family: 'Newsreader', Georgia, 'Times New Roman', Times, serif;
+    }
+
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    ul {
+        padding-inline-start: 1rem;
+    }
+
+    h2 {
+        padding-block-start: 2rem;
+    }
+
+    .page {
+        padding: 0.5cm;
+        width: 21cm;
+        min-height: 29.7cm;
+        height: 256mm;
+        padding: 1cm;
+        border: 1px #D3D3D3 solid;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        background: white;
+        margin: 1cm auto;
+    }
+
+    @media print {
+
+        html,
+        body {
+            width: 210mm;
+            height: 297mm;
+        }
+
+        .page {
+            margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+        }
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    blockquote {
+        font-style: italic;
+        border-inline-start: 2px solid black;
+        padding-inline-start: 1ch;
+        margin-inline-start: 0;
+    }
+
+    #skill-list {
+        font-family: 'Noto Sans Mono', monospace;
+        font-size: small;
+        list-style: none;
+        line-height: 1.7;
+        margin-inline-start: 0.5rem;
+    }
+
+    #skill-list li {
+        margin-block-end: 0.7rem;
+    }
+
+    #skill-list li::first-letter {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    #awards {
+        line-height: 1.5;
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+        font-style: italic;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #header {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: auto;
+        gap: 0 1rem;
+        grid-template-areas:
+            "title photo"
+            "quote photo"
+            "info info";
+    }
+
+    #header h1 {
+        grid-area: title;
+        font-size: 2rem;
+    }
+
+    #header #profile-img {
+        grid-area: photo;
+        border-radius: 6px;
+        border: 1px solid gray;
+        filter: grayscale(100%);
+    }
+
+    #header #name {
+        grid-area: title;
+    }
+
+    #header #info {
+        grid-area: info;
+        border-bottom: 1px solid darkgray;
+    }
+
+    #header #info tbody {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 1rem;
+    }
+
+    #header #summary {
+        text-wrap: pretty;
+        line-height: 1.1;
+    }
+
+    #work #work-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #work #work-wrapper span {
+        flex-grow: 1;
+        line-height: 0.5;
+    }
+
+    #work #company {
+        font-weight: 500;
+    }
+
+    #project-table th {
+        vertical-align: top;
+        text-align: left;
+    }
+
+    #project-table ul,
+    li {
+        line-height: 1.1;
+    }
+
+    #awards h4,
+    p {
+        margin-block: 0.5rem;
+    }
+
+    #awards li {
+        margin-block-end: 1rem;
+    }
+
+    .inline-list {
+        display: flex;
+        flex-direction: row;
+        gap: 1ch;
+    }
+
+    dt {
+        font-weight: bold;
+        margin-block-end: 0.3rem;
+    }
+
+    dd {
+        margin-block-end: 1.4rem;
+    }
+</style>
+
+<body>
+    <main class="book">
+        <div class="page">
+            <section id="header">
+                <div id="name">
+                    <h1>Saumyajeet</h1>
+                    <blockquote>
+                        Software Engineer with 2.7 years of work experience
+                    </blockquote>
+                </div>
+                <img id="profile-img" src="myphoto.png">
+                <table id="info" caption="Summary of personal information">
+                    <tbody>
+                        <tr>
+                            <th>📞</th>
+                            <td>+91-7044612204</td>
+                        </tr>
+                        <tr>
+                            <th>📧</th>
+                            <td>promptc3.0@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>🌏</th>
+                            <td>Pune, Maharashtra, India - 411007</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="summary">
+                    Experienced and knowledgeable software engineer with extensive practice in Mendix development
+                    looking to obtain a position that allows for the application of design skills, customer service
+                    and critical thinking to produce software that meets all goals and objectives
+                    outlined by the customer.
+                </p>
+            </section>
+            <section id="work">
+                <h2>Work Experience</h2>
+                <div id="work-wrapper">
+                    <span>
+                        <h3 id="role">Senior Software Engineer</h3>
+                        <p id="company">Intelizign Lifecycles Pvt. Ltd.</p>
+                        <p id="experience">May 2021 to Present (2.7 years)</p>
+                    </span>
+                    <span>
+                        <h3 id="role">Vocational Trainee</h3>
+                        <p id="company">Coal India Ltd.</p>
+                        <p id="experience">July 2018 (1 month)</p>
+                    </span>
+                </div>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul id="skill-list">
+                    <li>> Mendix Studio Pro | m2ee-tools | Widget Development | Mendix Private Cloud Deployment | Mendix
+                        On-Premise Deployment | Custom Mendix Connectors </li>
+                    <li>> Java | Ruby | C11 | C++ | Common Lisp | SHELL Scripting | MySQL | PostgreSQL </li>
+                    <li>> HTML | CSS | SASS | JavaScript | REST API | OData Service | SAML | OAuth2.0 </li>
+                    <li>> React | React Native | Ruby on Rails | Spring | Hibernate </li>
+                </ul>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <span>
+                    <h3>B.Tech, Electrical Engineering, Aug 2015 to April 2020</h3>
+                    <p>Indian Institute of Engineering Science & Technology, Shibpur, West Bengal</p>
+                </span>
+                <span>
+                    <h3>Higher Secondary(CBSE), April 2014</h3>
+                    <p>Army Public School, Jaipur, Rajasthan</p>
+                </span>
+            </section>
+        </div>
+        <div class="page">
+            <section id="project">
+                <h2>Projects</h2>
+                <span>
+                    <h3>IEC Low-Code Solution</h3>
+                    <table id="project-table">
+                        <thead>
+                            <th align="left" colspan="2">Senior Application Developer</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">About</th>
+                                <td>
+                                    <ul>
+                                        <li>Develop CARA(Computer Aided Reliability Analysis) interface in Mendix
+                                            to improve interface, accessibility and analysis as compared to the one
+                                            already existing in Teamcenter.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Responsibilities</th>
+                                <td>
+                                    <ul>
+                                        <li>Development of domain model and implementation of reliability analysis
+                                            calculation</li>
+                                        <li>Integration with Teamcenter data using SOA API</li>
+                                        <li>Implementation of UI in accordance with Siemens theme</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Technologies</th>
+                                <td>
+                                    <ul class="inline-list" id="skill-list">
+                                        <li>> Mendix</li>
+                                        <li>| Excel Import</li>
+                                        <li>| Teamcenter</li>
+                                        <li>| Teamcenter SOA API</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </span>
+                <span>
+                    <h3>After Sales (AFS) Portal</h3>
+                    <table id="project-table">
+                        <thead>
+                            <th align="left" colspan="2">Senior Application Developer</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">About</th>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            Application to manage warranty services, preventive maintenance scheduling,
+                                            shift planning,
+                                            employees attendance, ticket management and much more.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Responsibilities</th>
+                                <td>
+                                    <ul>
+                                        <li>Worked on design and implementation of domain model and workflow of the
+                                            application </li>
+                                        <li>Implementation of geotagging based attendance system using Google
+                                            Autocomplete and Places API</li>
+                                        <li>Implementation of SAML based authentication using Jumpcloud Portal.</li>
+                                        <li>Development of multiple complicated features like preventive maintannce
+                                            scheduling, shift roster planning and report generation.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Technologies</th>
+                                <td>
+                                    <ul class="inline-list" id="skill-list">
+                                        <li>> Mendix</li>
+                                        <li>| Java/Javascript Actions</li>
+                                        <li>| Workflows</li>
+                                        <li>| Google Places API</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </span>
+                <span>
+                    <h3>Other Projects</h3>
+                    <table>
+                        <th align="left">Production Monitoring</th>
+                        <tr>
+                            <td>
+                                Web application to view and edit the data related to system, components,
+                                function and feature of the
+                                automotive vehicle parts.
+                            </td>
+                        </tr>
+                        <th align="left">Resource Planner (Pluggable Widget)</th>
+                        <tr>
+                            <td>
+                                Mendix Pluggable Widget using Ant Table where users can plan and view events for
+                                resources based on dates.
+                            </td>
+                        </tr>
+                        <th align="left">Event Management</th>
+                        <tr>
+                            <td>
+                                Application to create and manage events for an organisation.
+                            </td>
+                        </tr>
+                        <th align="left">Hackathon Portal</th>
+                        <tr>
+                            <td>
+                                Application to conduct a 3-round hackathon with solution upload, scoring functionality
+                                and judge dashboard.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </span>
+            </section>
+        </div>
+        <div class="page">
+            <section id="certification">
+                <h2>Certifications</h2>
+                <table>
+                    <thead>
+                        <th align="left">Course</th>
+                        <th align="left">Issued by</th>
+                        <th align="left">Issued on</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mendix Advanced Developer Certification</td>
+                            <td>Mendix</td>
+                            <td>Jul 2022</td>
+                        </tr>
+                        <tr>
+                            <td>Mendix Intermediate Developer Certification</td>
+                            <td>Mendix</td>
+                            <td>Mar 2022</td>
+                        </tr>
+                        <tr>
+                            <td>Mendix Rapid Developer Certification</td>
+                            <td>Mendix</td>
+                            <td>Jan 2022</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced CSS Tips</td>
+                            <td>Linkedin</td>
+                            <td>Apr 2022</td>
+                        </tr>
+                        <tr>
+                            <td>Computational Methods in Electromagnetics and its Application</td>
+                            <td>NPTEL</td>
+                            <td>Jul 2017</td>
+                        </tr>
+                        <tr>
+                            <td>Stanford University Algorithms Specialization</td>
+                            <td>Coursera</td>
+                            <td>Aug 2016</td>
+                        </tr>
+                        <tr>
+                            <td>Embedded Systems and Robotics</td>
+                            <td>Hewlett Packard Enterprise</td>
+                            <td>Aug 2016</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="awards">
+                <h2>Awards</h2>
+                <ul>
+                    <li>
+                        <h4>League Of Superheroes (IEC Project) - Quarterly Award Q2 (July 2023 - Sept 2023)</h4>
+                        <p>In recognition of exemplar team work and achievements in IEC Project</p>
+                    </li>
+                    <li>
+                        <h4>Exceptional Performance Award 2022-23</h4>
+                        <p>For outstanding performance and contribution to multiple projects throughout the year</p>
+                    </li>
+                    <li>
+                        <h4>The Paladin - Quarterly Award (Jul to Sept) 2022</h4>
+                        <p>In recognition of outsanding performance for the quarter</p>
+                    </li>
+                    <li>
+                        <h4>The Paladin - Quarterly Award (Oct- Dec)2021
+                        </h4>
+                        <p>In recognition of outsanding performance for the quarter</p>
+                    </li>
+                </ul>
+            </section>
+            <section id="hobbies">
+                <h2>Hobbies & Interests</h2>
+                <dl>
+                    <dt>Photography</dt>
+                    <dd>You can checkout out my photography on Instagram <em>@saumya_jeet_</em> where I regularly post
+                        my clicks.</dd>
+                    <dt>Poetry</dt>
+                    <dd>I write in English and I have hosted multiple open mics and poetry meetup. I've also hosted one
+                        of the first English only poetry meetup in Pune called <em>Kaleidoscope.</em></dd>
+                </dl>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
